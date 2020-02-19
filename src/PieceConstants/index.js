@@ -30,8 +30,20 @@ export const SYMBOLS = {
     [whitePawn]: '\u2659'
 }
 
+// Result Possibilities
+const blackWins = '0-1';
+const whiteWins = '1-0';
+const tie = '1/2-1/2';
+
+// Exports RESULT possibilities
 export const RESULTS = {
     blackWins,
     whiteWins,
     tie
+}
+
+export const ANALYTICS_RESULTS = {
+    [whiteWins]: 1,
+    [blackWins]: 0,
+    [tie]: -1
 }
