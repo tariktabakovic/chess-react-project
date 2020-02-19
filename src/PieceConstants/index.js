@@ -29,3 +29,9 @@ export const SYMBOLS = {
     [whiteRook]: '\u2656',
     [whitePawn]: '\u2659'
 }
+
+export const RESULTS = {
+    blackWins,
+    whiteWins,
+    tie
+}
