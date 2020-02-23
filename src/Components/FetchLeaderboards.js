@@ -31,72 +31,77 @@ export default class FetchLeaderBoards extends React.Component {
     
     render () {
         return (
-        <div>
+        <div className = 'top5'>
 
             <div>
                 {this.state.loading || !this.state.rank1? (
                     <div>loading...</div> 
                     ) : ( 
                         <div>
-                    <div>Username: {this.state.rank1.username}</div>
                     <div>Rank: {this.state.rank1.rank}</div>
-                    <div> Avatar:
-                        <img src = {this.state.rank1.avatar}/>
+                    <div>Username: {this.state.rank1.username}</div>
+                    <div>Score: {this.state.rank1.score}</div>
+                    <div>
+                        <img src = {this.state.rank1.avatar} height= '70px' width= '70px'/>
                     </div>
                 </div>
-                )})
+                )}
             </div>
             <div>
                 {this.state.loading || !this.state.rank2? (
                     <div>loading...</div>
                     ) : (
                         <div>
-                    <div>Username: {this.state.rank2.username}</div>
                     <div>Rank: {this.state.rank2.rank}</div>
-                    <div> Avatar:
-                        <img src = {this.state.rank2.avatar}/>
+                    <div>Username: {this.state.rank2.username}</div>
+                    <div>Score: {this.state.rank2.score}</div>
+                    <div>
+                        <img src = {this.state.rank2.avatar} height= '70px' width= '70px'/>
                     </div>
                 </div>
-                )})
+                )}
             </div>
             <div>
                 {this.state.loading || !this.state.rank3? (
                     <div>loading...</div>
                     ) : (
                         <div>
-                    <div>Username: {this.state.rank3.username}</div>
                     <div>Rank: {this.state.rank3.rank}</div>
-                    <div> Avatar:
-                        <img src = {this.state.rank3.avatar}/>
+                    <div>Username: {this.state.rank3.username}</div>
+                    <div>Score: {this.state.rank3.score}</div>
+                    <div> 
+                        <img src = {this.state.rank3.avatar} height= '70px' width= '70px'/>
                     </div>
                 </div>
-                )})
+                )}
             </div>
             <div>
                 {this.state.loading || !this.state.rank4? (
                     <div>loading...</div>
                     ) : (
                         <div>
-                    <div>Username: {this.state.rank4.username}</div>
                     <div>Rank: {this.state.rank4.rank}</div>
-                    <div> Avatar:
-                        <img src = {this.state.rank4.avatar}/>
+                    <div>Username: {this.state.rank4.username}</div>
+                    <div>Score: {this.state.rank4.score}</div>
+                    <div> 
+                        <img src = {this.state.rank4.avatar} height= '70px' width= '70px'/>
                     </div>
                 </div>
-                )})
+                )}
             </div>
             <div>
                 {this.state.loading || !this.state.rank5? (
                     <div>loading...</div>
                     ) : (
                         <div>
-                    <div>Username: {this.state.rank5.username}</div>
                     <div>Rank: {this.state.rank5.rank}</div>
-                    <div> Avatar:
-                        <img src = {this.state.rank5.avatar}/>
+                    <div>Username: {this.state.rank5.username}</div>
+                    <div>Score: {this.state.rank5.score}</div>
+                    <div> 
+                        <img src = {this.state.rank5.avatar} height= '70px' width= '70px'/>
                     </div>
                 </div>
-                )})
+                )}
             </div>
         </div>
         )
