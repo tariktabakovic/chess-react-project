@@ -22,7 +22,7 @@ export default class Game extends React.Component {
 
         if(this.state.sourceSelection === -1){
             if(!squares[i] || squares[i].player !== this.state.player){
-                this.setState({status: 'Wrong player, choose another player' + this.state.player + 'pieces'});
+                this.setState({status: 'Wrong player, it is player ' + this.state.player + ' turn to move'});
                 if (squares[i]){
                     squares[i].style = {...squares[i].style, backgroundColor: ''};
                 }
@@ -112,7 +112,7 @@ export default class Game extends React.Component {
                     />
                 </div>
                 <div className = 'game-info'>
-                    <h3>Turn</h3>
+                    <h3>Below is whose turn it is</h3>
                     <div id = 'player-turn-box' style = {{backgroundColor: this.state.turn}}>
                 </div>
                 <div className = 'game-status'>{this.state.status}</div>
