@@ -78,11 +78,21 @@ export default class Game extends React.Component {
                     this.setState({
                         status: 'Wrong selection.',
                         sourceSelection: -1
-                    })
+                    });
                 }
             }
         }
+    }
+
+    isMoveLegal(srcToDestPath){
+        let isLegal = true; 
+        for(let i = 0; i < srcToDestPath.length; i++){
+            if(this.state.squares[srcToDestPath[i]] !== null){
+                isLegal = false;
+            }
         }
+        return isLegal;
+    }
         
     }
     render() {
