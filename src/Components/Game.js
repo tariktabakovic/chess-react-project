@@ -1,8 +1,8 @@
 import React from 'react';
-import 'src/App.css';
+import '/Users/tariktabakovic/chess-react-project/src/App.css';
 import Board from './Board';
-import DeadPieces from './DeadPieces';
-import InitialBoard from 'src/InitialBoard.js';
+import DeadPieces from '/Users/tariktabakovic/chess-react-project/src/components/DeadPieces.js';
+import InitialBoard from '/Users/tariktabakovic/chess-react-project/src/InitialBoard.js';
 
 export default class Game extends React.Component {
     constructor(){
@@ -23,10 +23,12 @@ export default class Game extends React.Component {
         if(this.state.sourceSelection === -1){
             if(!squares[i] || squares[i].player !== this.state.player){
                 this.setState({status: 'Wrong player, choose another player' + this.state.player + 'pieces'});
-                squares[i]? delete squares[i].style.backgroundColor: null;
+                if (squares[i]){
+                    squares[i].style = {...squares[i].style, backgroundColor: ''};
+                }
             }
             else {
-                squares[i].style = {...squares[i].style, backgroundColor: '128, 0, 0'};
+                squares[i].style = {...squares[i].style, backgroundColor: 'RGB(111, 143, 114'};
                 this.setState({
                     status: 'Choose a square',
                     sourceSelection: i
@@ -34,7 +36,7 @@ export default class Game extends React.Component {
             }
         }
         else if(this.state.sourceSelection > -1){
-            delete squares [this.state.sourceSelection].style.backgroundColor;
+            squares [this.state.sourceSelection].style = {...squares[this.state.sourceSelection].style, backgroundColor: ''};
             if(squares[i] && squares[i].player === this.state.player){
                 this.setState({
                     status: 'Wrong player, choose another player',
@@ -58,6 +60,7 @@ export default class Game extends React.Component {
                     else{
                         blackDeadPieces.push(squares[i]);
                     }
+                }
                     console.log('white dead pieces', whiteDeadPieces);
                     console.log('black dead pieces', blackDeadPieces);
                     squares[i]= squares[this.state.sourceSelection];
@@ -85,7 +88,7 @@ export default class Game extends React.Component {
     }
 
     isMoveLegal(srcToDestPath){
-        let isLegal = true; 
+        let isLegal = true;
         for(let i = 0; i < srcToDestPath.length; i++){
             if(this.state.squares[srcToDestPath[i]] !== null){
                 isLegal = false;
@@ -93,9 +96,11 @@ export default class Game extends React.Component {
         }
         return isLegal;
     }
-        
-    }
+
+
     render() {
+        
+        return(
         <div>
             <div className = 'game'>
                 <div className = 'game-board'>
@@ -109,7 +114,7 @@ export default class Game extends React.Component {
                 </div>
                 <div className = 'game-status'>{this.state.status}</div>
                 <div className = 'dead-pieces'>
-                    {<whiteDeadPieces
+                    {<DeadPieces
                     whiteDeadPieces = {this.state.whiteDeadPieces}
                     blackDeadPieces = {this.state.blackDeadPieces}
                     />
@@ -118,5 +123,6 @@ export default class Game extends React.Component {
                 </div>
             </div>
         </div>
+        );
     }
 }
