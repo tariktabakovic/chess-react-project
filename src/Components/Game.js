@@ -112,7 +112,7 @@ export default class Game extends React.Component {
                     />
                 </div>
                 <div className = 'game-info'>
-                    <h3>Below is whose turn it is</h3>
+                    <h3>Below is whose turn it is:</h3>
                     <div id = 'player-turn-box' style = {{backgroundColor: this.state.turn}}>
                 </div>
                 <div className = 'game-status'>{this.state.status}</div>
@@ -125,9 +125,6 @@ export default class Game extends React.Component {
                 </div>
                 </div>
             </div>
-            {/* <div className = 'icons-attribution'>
-
-            </div> */}
         </div>
         );
     }
