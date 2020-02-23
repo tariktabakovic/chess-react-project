@@ -74,6 +74,12 @@ export default class Game extends React.Component {
                         turn: turn
                     });
                 }
+                else{
+                    this.setState({
+                        status: 'Wrong selection.',
+                        sourceSelection: -1
+                    })
+                }
             }
         }
         }
