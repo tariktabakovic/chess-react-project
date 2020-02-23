@@ -3,7 +3,7 @@ import '/Users/tariktabakovic/chess-react-project/src/App.css';
 import Board from './Board';
 import DeadPieces from '/Users/tariktabakovic/chess-react-project/src/components/DeadPieces.js';
 import InitialBoard from '/Users/tariktabakovic/chess-react-project/src/InitialBoard.js';
-
+import Header from './Header';
 export default class Game extends React.Component {
     constructor(){
         super();
@@ -103,6 +103,9 @@ export default class Game extends React.Component {
         return(
         <div>
             <div className = 'game'>
+                <div className = 'header'>
+                    <Header />
+                </div>
                 <div className = 'game-board'>
                     <Board squares= {this.state.squares}
                     onClick = {(i) => this.handleClick(i)}
@@ -122,6 +125,9 @@ export default class Game extends React.Component {
                 </div>
                 </div>
             </div>
+            {/* <div className = 'icons-attribution'>
+
+            </div> */}
         </div>
         );
     }
