@@ -107,6 +107,14 @@ export default class Game extends React.Component {
                     <h3>Turn</h3>
                     <div id = 'player-turn-box' style = {{backgroundColor: this.state.turn}}>
                 </div>
+                <div className = 'game-status'>{this.state.status}</div>
+                <div className = 'dead-pieces'>
+                    {<whiteDeadPieces
+                    whiteDeadPieces = {this.state.whiteDeadPieces}
+                    blackDeadPieces = {this.state.blackDeadPieces}
+                    />
+                    }
+                </div>
                 </div>
             </div>
         </div>
