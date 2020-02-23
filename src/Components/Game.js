@@ -103,7 +103,12 @@ export default class Game extends React.Component {
                     onClick = {(i) => this.handleClick(i)}
                     />
                 </div>
-            ></div>
+                <div className = 'game-info'>
+                    <h3>Turn</h3>
+                    <div id = 'player-turn-box' style = {{backgroundColor: this.state.turn}}>
+                </div>
+                </div>
+            </div>
         </div>
     }
 }
