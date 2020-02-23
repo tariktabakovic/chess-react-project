@@ -1,5 +1,5 @@
 import React from 'react';
-import 'src/App.css';
+import '/Users/tariktabakovic/chess-react-project/src/App.css';
 import Square from './Square';
 
 export default class DeadPieces extends React.Component {
@@ -12,9 +12,11 @@ export default class DeadPieces extends React.Component {
     render(){
         return(
             <div>
-                <div className = 'board-row'>{this.props.whiteFallenSoldiers.map((ws,index) => this.renderSquare(ws,index))}
+                <div className = 'board-row'>{this.props.whiteDeadPieces.map((ws,index) => this.renderSquare(ws,index))}
+                Pieces seized by player 1:
                 </div>
-                <div className = 'board-row'>{this.props.blackFallenSoldiers.map((bs, index) => this.renderSquare(bs,index))}
+                <div className = 'board-row'>{this.props.blackDeadPieces.map((bs, index) => this.renderSquare(bs,index))}
+                Pieces seized by player 2:
                 </div>
             </div>
         )
