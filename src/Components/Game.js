@@ -58,6 +58,21 @@ export default class Game extends React.Component {
                     else{
                         blackDeadPieces.push(squares[i]);
                     }
+                    console.log('white dead pieces', whiteDeadPieces);
+                    console.log('black dead pieces', blackDeadPieces);
+                    squares[i]= squares[this.state.sourceSelection];
+                    squares[this.state.sourceSelection] = null;
+                    let player = this.state.player === 1? 2: 1;
+                    let turn = this.state.turn === 'white'? 'black' : 'white';
+                    this.setState({
+                        sourceSelection: -1, 
+                        squares: squares,
+                        whiteDeadPieces: whiteDeadPieces,
+                        blackDeadPieces: blackDeadPieces,
+                        player: player,
+                        status: '',
+                        turn: turn
+                    });
                 }
             }
         }
