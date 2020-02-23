@@ -12,11 +12,11 @@ export default class DeadPieces extends React.Component {
     render(){
         return(
             <div>
+                <p>Pieces seized by player 2:</p>
                 <div className = 'board-row'>{this.props.whiteDeadPieces.map((ws,index) => this.renderSquare(ws,index))}
-                Pieces seized by player 1:
                 </div>
+                <p>Pieces seized by player 1:</p>
                 <div className = 'board-row'>{this.props.blackDeadPieces.map((bs, index) => this.renderSquare(bs,index))}
-                Pieces seized by player 2:
                 </div>
             </div>
         )
