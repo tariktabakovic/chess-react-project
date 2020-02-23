@@ -3,18 +3,23 @@ import React from 'react';
 export default class FetchLeaderBoards extends React.Component {
 
     state = {
-        loading: true
+        loading: true,
+        rank: null
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         const url = 'https://api.chess.com/pub/leaderboards';
-        const response = fetch(url);
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({rank: data.daily.rank[0]})
+        console.log(data.daily);
     }
     
     render () {
-        return 
+        return (
         <div>
-            {this.state.loading ? <div>loading...</div> : <div>person..</div>}
+            {this.state.loading ? <div>loading...</div> : <div></div>}
         </div>
+        )
     }
 }
