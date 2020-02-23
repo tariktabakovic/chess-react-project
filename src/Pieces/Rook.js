@@ -3,7 +3,7 @@ import SYMBOLS from './PieceConstants';
 
 export default class Rook extends Piece {
     constructor(player){
-        super (player, (player === 1? '\u2656' : '\u265E'));
+        super (player, (player === 1? 'https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg' : 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg'));
     }
     isMovePossible(src, dest){
         let mod = src % 8;
