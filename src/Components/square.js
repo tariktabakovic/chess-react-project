@@ -1,14 +1,13 @@
-import React from './node_modules/react';
-import {SYMBOLS} from '../PieceConstants/index';
+import React from 'react';
+import '/Users/tariktabakovic/chess-react-project/src/App.css';
 
-export default class Square extends Component {
-    render() {
-        return (
-            <div>
-                <h1>{SYMBOLS}</h1>
-            </div>
-        )
-    }
+export default function Square(props){
+    return (
+        <button className = {'square ' + props.shade}
+        onClick = {props.onClick}
+        style = {props.style}>
+        </button>
+    );
 }
 
 
