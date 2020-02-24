@@ -5,7 +5,7 @@ import Rook from '/Users/tariktabakovic/chess-react-project/src/Pieces/Rook.js';
 import Queen from '/Users/tariktabakovic/chess-react-project/src/Pieces/Queen.js';
 import King from '/Users/tariktabakovic/chess-react-project/src/Pieces/King.js';
 
-export default function initialBoard(){
+export default function InitialBoard(){
     const squares = Array(64).fill(null);
     for(let i = 8; i < 16; i++){
         squares[i] = new Pawn(2);
