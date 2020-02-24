@@ -1,9 +1,9 @@
-import Pawn from './Pieces/Pawn';
-import Knight from './Pieces/Knight';
-import Bishop from './Pieces/Bishop';
-import Rook from './Pieces/Rook';
-import Queen from './Pieces/Queen';
-import King from './Pieces/King';
+import Pawn from '/Users/tariktabakovic/chess-react-project/src/Pieces/Pawn.js';
+import Knight from '/Users/tariktabakovic/chess-react-project/src/Pieces/Knight.js';
+import Bishop from '/Users/tariktabakovic/chess-react-project/src/Pieces/Bishop.js';
+import Rook from '/Users/tariktabakovic/chess-react-project/src/Pieces/Rook.js';
+import Queen from '/Users/tariktabakovic/chess-react-project/src/Pieces/Queen.js';
+import King from '/Users/tariktabakovic/chess-react-project/src/Pieces/King.js';
 
 export default function initialBoard(){
     const squares = Array(64).fill(null);
@@ -31,6 +31,6 @@ export default function initialBoard(){
     
     squares [59] = new Queen (1);
     squares [60] = new King(1);
-    
+
     return squares;
 }

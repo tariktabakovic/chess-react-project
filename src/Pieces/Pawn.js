@@ -1,5 +1,5 @@
 import Piece from '/Users/tariktabakovic/chess-react-project/src/Pieces/PieceClass.js';
-import SYMBOLS from './PieceConstants';
+
 
 export default class Pawn extends Piece {
     constructor(player){

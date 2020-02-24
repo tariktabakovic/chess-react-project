@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '/Users/tariktabakovic/chess-react-project/src/App.css';
-import Square from './Square';
+import Square from '/Users/tariktabakovic/chess-react-project/src/components/Square.js';
 
 export default class Board extends Component {
     renderSquare(i, squareShade){
@@ -16,7 +16,7 @@ export default class Board extends Component {
             const squareRows = [];
             for(let j = 0; j< 8; j++){
                 const squareShade = (isEven(i) && isEven(j)) || (!isEven(i) && !isEven(j))? 'light-square' : 'dark-square';
-                squareRowss.push(this.renderSquare((i*8) + j, squareShade)); 
+                squareRows.push(this.renderSquare((i*8) + j, squareShade)); 
             }
             board.push(<div className = 'board-row' >{squareRows}</div>)
         }

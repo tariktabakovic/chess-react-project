@@ -1,5 +1,4 @@
-import Piece from './PieceClass';  
-import SYMBOLS from './PieceConstants';
+import Piece from './PieceClass'; 
 
 export default class Rook extends Piece {
     constructor(player){

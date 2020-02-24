@@ -4,6 +4,7 @@ import Board from './Board';
 import DeadPieces from '/Users/tariktabakovic/chess-react-project/src/components/DeadPieces.js';
 import InitialBoard from '/Users/tariktabakovic/chess-react-project/src/InitialBoard.js';
 import Header from './Header';
+import FetchLeaderboards from '/Users/tariktabakovic/chess-react-project/src/components/FetchLeaderboards.js';
 export default class Game extends React.Component {
     constructor(){
         super();
@@ -125,6 +126,10 @@ export default class Game extends React.Component {
                 </div>
                 </div>
             </div>
+                <div className = 'leader-board'>
+                    <FetchLeaderboards
+                    />
+                </div>
         </div>
         );
     }
